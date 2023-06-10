@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -91,6 +90,81 @@ header .navbar button {
   cursor: pointer;
 }
 
+header .header__hero {
+  text-align: center;
+  color: #fff;
+}
+
+header .header__hero h1 {
+  font-size: 62px;
+  font-weight: bold;
+  line-height: 78px;
+  margin-bottom: 1rem;
+}
+
+header .header__hero p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.header__hero-form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__hero-input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  gap: 1rem;
+}
+
+.header__hero-input .form-control {
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.header__hero-input .form-control input {
+  border: none;
+  outline: none;
+  margin-left: 8px;
+  width: 90%;
+}
+
+.header__hero-input .form-control input::placeholder {
+  color: #afaeb4;
+}
+
+.header__hero-input .form-control img {
+  width: 16px;
+  height: 16px;
+}
+
+.header__hero-input .form-control:last-child span {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #afaeb4;
+}
+
+.header__hero-form .header__hero-button {
+  background-color: #34a5e4;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Tablet */
 @media screen and (max-width: 730px) {
   header .navbar ul,
@@ -100,5 +174,43 @@ header .navbar button {
 
   .hamburger {
     display: block;
+  }
+
+  header .header__hero h1 {
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 0.9rem;
+  }
+
+  header .header__hero p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .header__hero-form {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 1rem;
+  }
+
+  .header__hero-input {
+    padding: 12px;
+  }
+
+  .header__hero-form button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header .header__hero h1 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0.5rem;
+  }
+
+  header .header__hero p {
+    font-size: 12px;
+    line-height: 16px;
   }
 }
