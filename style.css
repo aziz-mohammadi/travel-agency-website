@@ -417,6 +417,7 @@ header .header__hero p {
 
 .cities .cities__cards .card {
   position: relative;
+  overflow: hidden;
 }
 
 .cities .cities__cards .card .card__title {
@@ -454,7 +455,84 @@ header .header__hero p {
 
 .cities .cities__cards .card img {
   height: 495px;
+  border-radius: 16px;
 }
+
+/* Testimonials */
+.testimonials {
+  padding: 3rem 0;
+}
+
+.testimonials .testimonials__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 7rem;
+}
+
+.testimonials .testimonials__cards .card {
+  padding: 14px;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.testimonials .testimonials__cards .card .card__img {
+  width: 77px;
+  height: 77px;
+  position: absolute;
+  text-align: center;
+  top: -40px;
+  align-self: center;
+}
+
+.testimonials .testimonials__cards .card .card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonials .testimonials__cards .card .card__name {
+  margin-top: 3rem;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #292929;
+  align-self: center;
+}
+
+.testimonials .testimonials__cards .card .card__job {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #6d7487;
+  margin-top: 8px;
+  align-self: center;
+}
+
+.testimonials .testimonials__cards .card .card__stars {
+  display: flex;
+  align-items: center;
+  justify-items: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 8px;
+}
+
+.testimonials .testimonials__cards .card .card__stars img {
+  width: 16px;
+  height: 16px;
+}
+
+.testimonials .testimonials__cards .card .card__desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #646670;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1286px) {
@@ -482,7 +560,8 @@ header .header__hero p {
 
   .explore,
   .partners,
-  .cities {
+  .cities,
+  .testimonials {
     margin: 3rem 1rem;
   }
 
@@ -515,6 +594,14 @@ header .header__hero p {
 
   .cities .cities__cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials .testimonials__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials .testimonials__cards .card {
+    margin: 1rem 0;
   }
 }
 
@@ -576,6 +663,10 @@ header .header__hero p {
     width: 100%;
     object-fit: cover;
   }
+
+  .testimonials .testimonials__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -603,6 +694,10 @@ header .header__hero p {
   }
 
   .partners__image {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials .testimonials__cards {
     grid-template-columns: 1fr;
   }
 }
